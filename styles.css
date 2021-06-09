@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
+  font-family: "Orbitron", sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -63,4 +65,5 @@ body {
   box-shadow: 0 0 3px hsla(233, 25%, 6%, 0.61);
   border: none;
   outline: none;
+  font-family: inherit;
 }
