@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QRCODE gen</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        height: 100vh;
-        display: grid;
-        place-content: center;
-        overflow: hidden;
-      }
-    </style>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <script type="text/javascript" src="qrcode.js"></script>
-
-    <div id="main"></div>
+    <div class="qrcode">
+      <form id="qrcodeform" action="" class="qrcode__form">
+        <h4 class="qrcode__form--header">Populate Qr Code with your data</h4>
+        <textarea
+          name="qrdata"
+          id="qrdata"
+          cols="30"
+          rows="10"
+          class="qrcode__form--data"
+        ></textarea>
+        <button class="qrcode__form--btn">Generate</button>
+      </form>
+      <div class="qrcode__output"></div>
+    </div>
 
     <script src="./node_modules/qrcode-generator/qrcode.js"></script>
     <script src="./main.js"></script>

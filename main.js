@@ -1,27 +1,24 @@
-var typeNumber = 0;
-var errorCorrectionLevel = "L";
-var qr = qrcode(typeNumber, errorCorrectionLevel);
-const data = `
-    Calabash pub
-    Menu
-    Wali samaki - 6000
-    Ugali samaki - 5000
-    Wali nyama - 6000
-    Makage mbuzi - 6000
-    Ndizi samaki - 6000
-    Mchemsho mbuzi - 6000
-    Wali samaki - 6000
-    Wali samaki - 6000
-    Wali samaki - 6000
-    Wali samaki - 6000
+const textEl = document.getElementById("qrdata");
+const qrcodeform = document.getElementById("qrcodeform");
 
+qrcodeform.onsubmit = (e) => {
+  e.preventDefault();
+  const dataToGen = textEl.value || undefined;
 
-  
-`;
-try {
-  qr.addData(data);
-  qr.make();
-  document.getElementById("main").innerHTML = qr.createImgTag();
-} catch (error) {
-  console.dir(error);
-}
+  if (!dataToGen) return;
+
+  genarate(dataToGen);
+};
+
+const genarate = (data) => {
+  const typeNumber = 0;
+  const errorCorrectionLevel = "L";
+  const qr = qrcode(typeNumber, errorCorrectionLevel);
+  try {
+    qr.addData(data);
+    qr.make();
+    document.querySelector(".qrcode__output").innerHTML = qr.createImgTag();
+  } catch (error) {
+    document.querySelector(".qrcode__output").innerHTML = JSON.stringify(error);
+  }
+};
