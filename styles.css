@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+:root {
+  --shadow: hsla(233, 27%, 6%, 0.281);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +16,7 @@ body {
 }
 
 .qrcode__output {
-  border: 1px solid black;
+  box-shadow: 0 0 3px var(--shadow);
 }
 
 .qrcode__form--btn {
@@ -21,7 +24,7 @@ body {
   cursor: pointer;
   padding: 0.8rem 0;
   background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-  box-shadow: 0 0 3px hsla(233, 27%, 6%, 0.281);
+  box-shadow: 0 0 3px var(--shadow);
   font-weight: 100;
   font-size: 1rem;
   text-transform: uppercase;
@@ -30,7 +33,7 @@ body {
 }
 
 .qrcode__form {
-  box-shadow: inset 0 0 3px hsla(233, 27%, 6%, 0.281);
+  box-shadow: inset 0 0 3px var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +46,7 @@ body {
 .qrcode {
   padding: 4vw;
   width: 90%;
-  box-shadow: 0 0 3px hsla(233, 25%, 6%, 0.61);
+  box-shadow: 0 0 3px var(--shadow);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -62,7 +65,7 @@ body {
   padding: 2vw;
   font-size: 1rem;
   line-height: 1.4;
-  box-shadow: 0 0 3px hsla(233, 25%, 6%, 0.61);
+  box-shadow: 0 0 3px var(--shadow);
   border: none;
   outline: none;
   font-family: inherit;
