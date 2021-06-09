@@ -30,6 +30,7 @@ body {
   text-transform: uppercase;
   outline: none;
   border: none;
+  font-family: inherit;
 }
 
 .qrcode__form {
