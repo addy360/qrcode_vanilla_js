@@ -3,7 +3,7 @@ const qrcodeform = document.getElementById("qrcodeform");
 
 qrcodeform.onsubmit = (e) => {
   e.preventDefault();
-  const dataToGen = textEl.value || undefined;
+  const dataToGen = textEl.value.trim() || undefined;
 
   if (!dataToGen) return;
 

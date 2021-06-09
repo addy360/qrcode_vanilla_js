@@ -34,6 +34,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 4vw;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .qrcode {
@@ -43,6 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 90%;
 }
 
 .qrcode__form--header {
